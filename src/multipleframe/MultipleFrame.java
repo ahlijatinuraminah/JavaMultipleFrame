@@ -1,0 +1,24 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package multipleframe;
+
+/**
+ *
+ * @author ahlij
+ */
+public class MultipleFrame {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        LoginView lv = new LoginView();
+        lv.setLocationRelativeTo(null);
+        lv.setVisible(true);
+    }
+    
+}
