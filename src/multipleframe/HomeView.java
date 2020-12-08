@@ -15,7 +15,7 @@ public class HomeView extends javax.swing.JFrame {
     /**
      * Creates new form HomeView
      */
-    public HomeView() {
+    public HomeView() { //constructor
         initComponents();
     }
     

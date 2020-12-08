@@ -12,8 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class LoginView extends javax.swing.JFrame {
 
-    String username = "admin";
-    String password = "123456";
+    String username = "admin";//valid username
+    String password = "123456";//valid pasword
     /**
      * Creates new form LoginView
      */
@@ -137,14 +137,14 @@ public class LoginView extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        String _username = txtUsername.getText();
-        String _password = new String(txtPassword.getPassword());
+        String _username = txtUsername.getText();//username diinput
+        String _password = new String(txtPassword.getPassword());//password diinput
         
-        if(username.equalsIgnoreCase(_username) && password.equalsIgnoreCase(_password)){
-            HomeView hv = new HomeView(_username);            
-            hv.setLocationRelativeTo(null);
-            hv.setVisible(true);
-            this.setVisible(false);
+        if(username.equalsIgnoreCase(_username) && password.equals(_password)){
+            HomeView home = new HomeView(_username); //memanggil frame HomeView dan mengirim username           
+            home.setLocationRelativeTo(null); //mengeset homeview di tengah
+            home.setVisible(true); //menampilkan homeview
+            this.setVisible(false); //menghilangkan loginview
         }else{
             JOptionPane.showMessageDialog(null, "Username dan password tidak sesuai!",
       "Message!", JOptionPane.ERROR_MESSAGE);
